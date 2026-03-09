@@ -40,6 +40,7 @@ body{
   color:var(--text);
   line-height:1.65;
   overflow-x:hidden;
+  padding-top: 80px;
   width:100%;
   max-width:100%;
 }
@@ -293,7 +294,7 @@ button, input, textarea, select{
 }
 
 .header{
-  position: sticky;
+  position: fixed;
   top:0;
   z-index: 50;
   background: rgba(255,255,255,.86);
@@ -1112,4 +1113,5 @@ hr.soft{
   .table td{
     padding: 12px;
   }
+
 }
