@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Request | DevlpCode</title>
+  <link rel="stylesheet" href="request.css" />
+</head>
+<body>
+  <section class="request-page">
+    <div class="container">
+      <div class="page-head">
+        <p class="mini-tag">DevlpCode</p>
+        <h1>Start Your Project Request</h1>
+        <p>
+          Tell us about your project and we’ll review your requirements before sending the final quote.
+        </p>
+      </div>
+
+      <div class="request-wrapper">
+        <!-- LEFT: FORM -->
+        <div class="form-card">
+          <form id="projectForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your full name" />
+                <small class="error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" />
+                <small class="error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+                <small class="error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="businessName">Business / Brand Name</label>
+                <input type="text" id="businessName" name="businessName" placeholder="Your business name" />
+              </div>
+
+              <div class="form-group">
+                <label for="projectType">Project Type *</label>
+                <select id="projectType" name="projectType">
+                  <option value="">Select project type</option>
+                  <option>Landing Page</option>
+                  <option>Business Website</option>
+                  <option>Portfolio Website</option>
+                  <option>E-commerce Website</option>
+                  <option>Blog / Content Website</option>
+                  <option>Custom Web Project</option>
+                </select>
+                <small class="error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="design">Design Style *</label>
+                <select id="design" name="design">
+                  <option value="">Select design style</option>
+                  <option>Modern & Minimal</option>
+                  <option>Corporate / Professional</option>
+                  <option>Creative / Colorful</option>
+                  <option>Luxury / Premium</option>
+                  <option>Not Sure</option>
+                </select>
+                <small class="error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="timeline">Preferred Timeline *</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select timeline</option>
+                  <option>Urgent (3-5 days)</option>
+                  <option>1-2 weeks</option>
+                  <option>2-4 weeks</option>
+                  <option>Flexible</option>
+                </select>
+                <small class="error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="pagesNeeded">Pages Needed *</label>
+                <input type="number" id="pagesNeeded" name="pagesNeeded" min="1" placeholder="Example: 5" />
+                <small class="error"></small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="details">Project Details *</label>
+              <textarea
+                id="details"
+                name="details"
+                rows="6"
+                placeholder="Describe your project, goals, style, target audience, and anything important..."
+              ></textarea>
+              <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+              <label>Features Needed</label>
+              <div class="checkbox-grid">
+                <label><input type="checkbox" name="features" value="Responsive Design" /> Responsive Design</label>
+                <label><input type="checkbox" name="features" value="Contact Form" /> Contact Form</label>
+                <label><input type="checkbox" name="features" value="WhatsApp Chat" /> WhatsApp Chat</label>
+                <label><input type="checkbox" name="features" value="SEO Setup" /> SEO Setup</label>
+                <label><input type="checkbox" name="features" value="Speed Optimization" /> Speed Optimization</label>
+                <label><input type="checkbox" name="features" value="Admin Panel" /> Admin Panel</label>
+                <label><input type="checkbox" name="features" value="Blog" /> Blog</label>
+                <label><input type="checkbox" name="features" value="Payment Integration" /> Payment Integration</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMethod">Preferred Contact Method *</label>
+              <select id="contactMethod" name="contactMethod">
+                <option value="">Select contact method</option>
+                <option>Email</option>
+                <option>Phone Call</option>
+                <option>WhatsApp</option>
+              </select>
+              <small class="error"></small>
+            </div>
+
+            <div class="terms-box">
+              <label class="terms-label">
+                <input type="checkbox" id="terms" name="terms" />
+                I agree that DevlpCode may contact me regarding this project request. *
+              </label>
+              <small class="error terms-error"></small>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary-btn">Submit Project Request</button>
+              <a href="pricing.html" class="btn secondary-btn">Cancel</a>
+            </div>
+
+            <div id="successMessage" class="success-message"></div>
+          </form>
+        </div>
+
+        <!-- RIGHT: SUMMARY -->
+        <aside class="summary-card">
+          <span class="summary-badge">Selected Plan</span>
+          <h2 id="planTitle">Starter Plan</h2>
+          <p class="price-line">Starting at <strong id="planPrice">₹4,999</strong></p>
+
+          <div class="summary-list">
+            <div class="summary-item">
+              <span>Support</span>
+              <strong id="planSupport">Basic support included</strong>
+            </div>
+            <div class="summary-item">
+              <span>Delivery</span>
+              <strong id="planDelivery">Fast turnaround</strong>
+            </div>
+            <div class="summary-item">
+              <span>Best For</span>
+              <strong id="planBestFor">Simple startup or personal site</strong>
+            </div>
+          </div>
+
+          <div class="trust-box">
+            <h3>Why choose DevlpCode?</h3>
+            <ul>
+              <li>Clean and modern website design</li>
+              <li>Mobile responsive layout</li>
+              <li>Clear communication throughout project</li>
+              <li>Custom build based on your needs</li>
+            </ul>
+          </div>
+
+          <div class="quote-note">
+            <p>
+              <strong>Note:</strong> Final quote depends on project scope, features, content, design complexity,
+              and timeline.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <script src="request.js"></script>
+</body>
+</html>

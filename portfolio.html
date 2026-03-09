@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — DevlpCode</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <a class="brand" href="index.html"><span class="logo"><img src="logo.png"></i></span><span>DevlpCode</span></a>
+        <nav class="nav" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-outline" href="case-study.html"><i class="ri-file-chart-line"></i> Case Study</a>
+          <button class="menu-btn" id="menuBtn" aria-label="Open Menu"><i class="ri-menu-3-line"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="kicker">Portfolio</div>
+      <h1 class="h1" style="margin-top:10px;">Some of the website layouts and designs we have built.</h1>
+      <div class="breadcrumb"><a class="link" href="index.html">Home</a> <span>→</span> <span>Portfolio</span></div>
+      <p class="p" style="margin-top:14px; max-width:72ch;">
+        Filter by category and explore section-rich designs made for real businesses.
+      </p>
+
+      <div class="tabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="business">Business</button>
+        <button class="tab" data-filter="portfolio">Portfolio</button>
+        <button class="tab" data-filter="landing">Landing</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="portfolio-grid">
+        <article class="work" data-type="business">
+          <img alt="Business website" src="image-6.png">
+          <div class="content">
+            <h3 class="h3">Modern E-commerce Landing Page</h3>
+            <p class="p" style="margin-top:10px;">Product showcase, category browsing and a smooth shopping experience designed to boost sales.</p>
+            <p class="p" style="margin-top:10px;">Modern online store landing page featuring a hero banner, product highlights and promotional sections.
+              Structured to improve product visibility and provide a seamless shopping experience.</p>
+            <span class="tag">E-commerce</span>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn-outline" href="case-study.html"><i class="ri-file-chart-line"></i> Case Study</a>
+              <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Build Similar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work" data-type="portfolio">
+          <img alt="Portfolio website" src="image-7.png">
+          <div class="content">
+            <h3 class="h3">Modern Developer Portfolio Dashboard</h3>
+            <p class="p" style="margin-top:10px;">Interactive developer profile with project showcase, skill progress and coding insights.</p>
+            <p class="p" style="margin-top:10px;">A premium developer portfolio highlighting projects, skills, and coding progress in a modern UI.
+              Designed to present technical expertise through a structured and visually engaging layout.</p>
+            <span class="tag">Portfolio</span>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn-outline" href="blog-post.html"><i class="ri-article-line"></i> Build Tips</a>
+              <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Customize</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work" data-type="landing">
+          <img alt="Landing page" src="image-8.png">
+          <div class="content">
+            <h3 class="h3">Restaurant & Food Ordering Website</h3>
+            <p class="p" style="margin-top:10px;">Modern restaurant landing page featuring menu showcase, featured dishes and online ordering system.</p>
+            <p class="p" style="margin-top:10px;">A modern restaurant website designed to showcase delicious dishes, menu highlights and featured meals.
+              Built to improve customer engagement with online ordering and reservation options.</p>
+            <span class="tag">Ordering</span>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn-outline" href="pricing.html"><i class="ri-price-tag-3-line"></i> Plans</a>
+              <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Start</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work" data-type="business">
+          <img alt="Agency site" src="image-9.png">
+          <div class="content">
+            <h3 class="h3">Agency Website (Service First)</h3>
+            <p class="p" style="margin-top:10px;">Modern agency landing page showcasing services, portfolio work and client-focused solutions.</p>
+            <p class="p" style="margin-top:10px;">A modern digital agency website designed to highlight services, featured projects and brand identity.
+              Built to attract clients through clear messaging, portfolio showcases and strong call-to-action sections.</p>
+            <span class="tag">Business</span>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn-outline" href="services.html"><i class="ri-service-line"></i> Services</a>
+              <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Build Similar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work" data-type="portfolio">
+          <img alt="Showcase" src="image-10.png">
+          <div class="content">
+            <h3 class="h3">Modern Blog & Content Platform</h3>
+            <p class="p" style="margin-top:10px;">Clean blog platform designed for publishing articles, featured posts and category-based content.</p>
+            <p class="p" style="margin-top:10px;">A modern blog platform designed to showcase articles, featured posts and trending topics.
+              Built with a clean layout focused on readability and smooth content browsing.</p>
+            <span class="tag">Social Media</span>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn-outline" href="case-study.html"><i class="ri-file-chart-line"></i> Read Case</a>
+              <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Make Mine</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work" data-type="landing">
+          <img alt="Startup landing" src="image-11.png">
+          <div class="content">
+            <h3 class="h3">College & University Website</h3>
+            <p class="p" style="margin-top:10px;">Modern university website showcasing academic programs, campus life and admission information.</p>
+            <p class="p" style="margin-top:10px;">A modern university website designed to present academic programs, admissions and campus life.
+              Built with a structured layout to help students explore courses and university opportunities.</p>
+            <span class="tag">University</span>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn-outline" href="blog.html"><i class="ri-article-line"></i> Guides</a>
+              <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Build</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="banner" style="margin-top:22px;">
+        <div>
+          <div class="kicker">Want a custom design?</div>
+          <div style="font-weight:950; font-size:18px; margin-top:6px;">Tell us your business and we’ll match a premium layout.</div>
+          <p class="p" style="margin-top:10px;">We’ll suggest page structure, sections and a clean style direction.</p>
+        </div>
+        <a class="btn btn-primary" href="contact.html"><i class="ri-send-plane-2-line"></i> Contact</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="brand" href="index.html"><span class="logo"><i class="ri-rocket-2-line"></i></span><span>DevlpCode</span></a><p class="p" style="margin-top:10px;">Portfolio of premium responsive builds.</p></div>
+        <div><div style="font-weight:950;">Company</div><div class="list" style="margin-top:10px;"><a href="about.html">About</a><a href="case-study.html">Case Study</a><a href="blog.html">Blog</a></div></div>
+        <div><div style="font-weight:950;">Services</div><div class="list" style="margin-top:10px;"><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="service-detail.html">Service Detail</a></div></div>
+        <div><div style="font-weight:950;">Start</div><div class="list" style="margin-top:10px;"><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a><a href="blog-post.html">Latest Post</a></div></div>
+      </div>
+      <div style="margin-top:18px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+        <small>© DevlpCode. All rights reserved.</small><small>"Designed & Developed by Ravikant Narnolia"</small>
+      </div>
+    </div>
+  </footer>
+
+  <button class="backtop" id="backTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+  <script src="main.js"></script>
+</body>
+</html>
