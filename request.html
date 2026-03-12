@@ -187,5 +187,25 @@
   </section>
 
   <script src="request.js"></script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDABHstfL5WTBpcBVzyhwlq8IkTHsxsnes",
+    authDomain: "yourcode-ea524.firebaseapp.com",
+    projectId: "yourcode-ea524",
+    storageBucket: "yourcode-ea524.firebasestorage.app",
+    messagingSenderId: "406065672344",
+    appId: "1:406065672344:web:84219ca6ce5c89a08460ed"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+  window.collection = collection;
+  window.addDoc = addDoc;
+</script>
 </body>
 </html>
