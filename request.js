@@ -170,23 +170,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form) return;
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    if (validateForm()) {
-      const selectedPlan = getPlanFromURL();
-      const data = planData[selectedPlan];
+    if (!validateForm()) {
+      if (successMessage) successMessage.style.display = "none";
+      return;
+    }
 
-      successMessage.style.display = "block";
-      successMessage.textContent = `Your project request for the ${data.title} has been submitted successfully. Redirecting to home page...`;
+    const selectedPlan = getPlanFromURL();
+    const data = planData[selectedPlan];
+
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const businessName = document.getElementById("businessName");
+    const projectType = document.getElementById("projectType");
+    const design = document.getElementById("design");
+    const timeline = document.getElementById("timeline");
+    const pagesNeeded = document.getElementById("pagesNeeded");
+    const details = document.getElementById("details");
+    const contactMethod = document.getElementById("contactMethod");
+
+    const features = [...document.querySelectorAll('input[name="features"]:checked')].map(
+      (item) => item.value
+    );
+
+    if (!window.db || !window.collection || !window.addDoc) {
+      if (successMessage) {
+        successMessage.style.display = "block";
+        successMessage.textContent = "Firebase is not connected yet. Please check your Firebase script.";
+      }
+      return;
+    }
+
+    try {
+      await window.addDoc(window.collection(window.db, "projectRequests"), {
+        fullName: fullName ? fullName.value.trim() : "",
+        email: email ? email.value.trim() : "",
+        phone: phone ? phone.value.trim() : "",
+        businessName: businessName ? businessName.value.trim() : "",
+        projectType: projectType ? projectType.value.trim() : "",
+        design: design ? design.value.trim() : "",
+        timeline: timeline ? timeline.value.trim() : "",
+        pagesNeeded: pagesNeeded ? pagesNeeded.value.trim() : "",
+        details: details ? details.value.trim() : "",
+        features: features,
+        contactMethod: contactMethod ? contactMethod.value.trim() : "",
+        selectedPlan: selectedPlan,
+        planTitle: data.title,
+        planPrice: data.price,
+        planSupport: data.support,
+        planDelivery: data.delivery,
+        planBestFor: data.bestFor,
+        createdAt: new Date().toISOString()
+      });
+
+      if (successMessage) {
+        successMessage.style.display = "block";
+        successMessage.textContent = `Your project request for the ${data.title} has been submitted successfully. Redirecting to home page...`;
+      }
 
       form.reset();
 
       setTimeout(() => {
         window.location.href = "index.html";
       }, 2000);
-    } else {
-      successMessage.style.display = "none";
+    } catch (error) {
+      console.error("Firebase save error:", error);
+
+      if (successMessage) {
+        successMessage.style.display = "block";
+        successMessage.textContent = "Something went wrong while sending your request. Please try again.";
+      }
     }
   });
 
