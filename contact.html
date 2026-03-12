@@ -48,35 +48,39 @@
           <div class="sep"></div>
 
           <form class="form" id="contactForm" novalidate>
-            <div class="field">
-              <label class="label" for="name">Full name</label>
-              <input class="input" id="name" type="text" placeholder="Your name" required>
-            </div>
 
-            <div class="field">
-              <label class="label" for="email">Email</label>
-              <input class="input" id="email" type="email" placeholder="you@example.com" required>
-            </div>
+  <div class="field">
+    <label class="label" for="name">Full name</label>
+    <input class="input" id="name" name="name" type="text" placeholder="Your name" required>
+  </div>
 
-            <div class="field">
-              <label class="label" for="topic">Topic</label>
-              <select class="select" id="topic" required>
-                <option value="">Select a topic</option>
-                <option value="Landing page">Landing page</option>
-                <option value="Business website">Business website</option>
-                <option value="Portfolio">Portfolio</option>
-                <option value="Redesign">Redesign</option>
-                <option value="College project">College project</option>
-              </select>
-            </div>
+  <div class="field">
+    <label class="label" for="email">Email</label>
+    <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required>
+  </div>
 
-            <div class="field">
-              <label class="label" for="message">Message</label>
-              <textarea class="textarea" id="message" placeholder="Describe your goal, pages, and style you like..." required></textarea>
-            </div>
+  <div class="field">
+    <label class="label" for="topic">Topic</label>
+    <select class="select" id="topic" name="topic" required>
+      <option value="">Select a topic</option>
+      <option value="Landing page">Landing page</option>
+      <option value="Business website">Business website</option>
+      <option value="Portfolio">Portfolio</option>
+      <option value="Redesign">Redesign</option>
+      <option value="College project">College project</option>
+    </select>
+  </div>
 
-            <button class="btn btn-primary" type="submit"><i class="ri-send-plane-2-line"></i> Send Message</button>
-          </form>
+  <div class="field">
+    <label class="label" for="message">Message</label>
+    <textarea class="textarea" id="message" name="message" placeholder="Describe your goal, pages, and style you like..." required></textarea>
+  </div>
+
+  <button class="btn btn-primary" type="submit">
+    <i class="ri-send-plane-2-line"></i> Send Message
+  </button>
+
+</form>
         </div>
 
         <div>
@@ -155,5 +159,25 @@
   </div>
 
   <script src="main.js"></script>
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDABHstfL5WTBpcBVzyhwlq8IkTHsxsnes",
+    authDomain: "yourcode-ea524.firebaseapp.com",
+    projectId: "yourcode-ea524",
+    storageBucket: "yourcode-ea524.firebasestorage.app",
+    messagingSenderId: "406065672344",
+    appId: "1:406065672344:web:84219ca6ce5c89a08460ed"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+  window.collection = collection;
+  window.addDoc = addDoc;
+</script>
 </body>
 </html>
